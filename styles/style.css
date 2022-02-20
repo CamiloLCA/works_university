@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+    --secundary-color: #00437A;
+    --blue-light: #517ea3;
+}
+
+body{
+    min-width: 280px;
+    min-height: 1000px;
+}
+
+.header{
+    display: grid;
+    grid-template-rows: 70px 75vh 20vh;
+    overflow-x: hidden;
+}
+
+.header__nav{
+    position: fixed;
+    background: radial-gradient(circle at 50% 10%, var(--blue-light), var(--secundary-color));
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 70px;
+    z-index: 2;
+}
+
+.header__nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items : flex-end;
+}
+
+.header__nav li{
+    line-height: 70px;
+    width: 150px;
+    min-width: 80px;
+    text-align: center;
+}
+
+.header__nav li:hover{
+    background-color: #00437A55;
+}
+
+.header__nav a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header__background{
+    background: url(../pictures/university_picture.jpeg) no-repeat bottom;
+    background-size: 700px 75vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    grid-row: 2 / 3;
+}
+
+.header__background--logo{
+    position: absolute;
+    top: 20px;
+    width: 430px;
+    height: 250px;
+    background: url(../pictures/logo_university.png);
+}
+
+.header__background--gradient{
+    width: 100%;
+    height: 75vh;
+    background: linear-gradient(to top, #00437AFF 15%, #00437A22 60%);
+    opacity: 50%;
+}
+
+.header__exercises{
+    background: radial-gradient(circle at 50% 10%, var(--blue-light), var(--secundary-color));
+    font-size: 2.5em;
+    -webkit-text-stroke: 2.5px black;
+    font-weight: bolder;
+    color: #ffffff;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 3 / 4;
+}
+
+.main{
+    background: linear-gradient(to top, #C9C9C9, #E0E0E0);
+}
+
+.main__section-title{
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    padding: 40px 0px;
+    font-weight: bolder;
+    color: var(--secundary-color);
+}
+
+.main__section{
+    font-size: 16px;
+    text-align: justify;
+    padding: 20px;
+}
+
+.main__section-p{
+    text-align: center;
+}
+
+.main__section-p-elements{
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--blue-light);
+}
+
+.main__section-p-element{
+    margin: 35px 0;
+}
+
+.main__section-polya-container{
+    margin: 60px 0 0;
+}
+
+.main__section-polya-steps{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.main__section-polya-step-title{
+    background-color: var(--blue-light);
+    text-align: center;
+    border: 0.5px solid var(--secundary-color);
+    line-height: 50px;
+    min-width: 280px;
+    width: 900px;
+    color: var(--secundary-color);
+}
+
+.main__section-polya-steps-container{
+    list-style: none;
+    display: none;
+}
+
+.main__section-workshop-problem{
+    margin-top: 120px;
+}
+
+.main__section-workshop-problem:first-child{
+    margin-top: 0;
+}
+
+.main__section-workshop-problem-solution-review--background{
+    background: red;
+}
+
+.main__section-workshop-problem-solution-reviews{
+    margin: 50px 0;
+    display: grid;  
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px, 200px;
+    gap: 5px;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.main__section-workshop-problem-solution-review{
+    border: 3px solid #00437A;
+    padding: 20px;
+    background: #999;
+}
+
+.main__section-workshop-problem-solution-review:hover{
+    background: #999a;
+    cursor: pointer;
+}
+
+.main__section-workshop-problem-solution-boxes{
+    margin: 50px 0;
+    display: grid;  
+    grid-template-columns: 1fr;
+    gap: 5px;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.main__section-workshop-problem-solution-box{
+    border: 3px solid #00437A;
+    padding: 20px;
+    background: #999;
+}
+
+.main__section-workshop-problem-solution-box:hover{
+    background: #999a;
+    cursor: pointer;
+}
+
+
+
+.main__section-workshop-problem-solution-review{
+    grid-column: 1 / 4;
+}
+
+.main__section--answer{
+    color: var(--blue-light);
+}
+
+.main__section--months{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.main__section-workshop-problem-solution-review--impar{
+    grid-column: 1 / 2;
+}
+
+.main__section-workshop-problem-solution-review--par{
+    grid-column: 2 / 3;
+}
+
+.main__section-workshop-problem-solution-review--background{
+    background-color: var(--blue-light);
+}
+
+.main__section-workshop-problem-solution-review--background:hover{
+    background-color: #517ea3aa;
+}
+
+.footer{
+    background: var(--secundary-color);
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+@media (min-width:720px){
+
+    .main__section:first-child{
+        margin: 0 80px;
+    }
+    
+    .main__section:last-child{
+        margin: 20px 80px 0;
+    }
+
+    .main__section{
+        margin: 20px 80px;
+        font-size: 1.2em;
+    }
+
+    .main__section-title{
+        font-size: 28px;
+    }
+
+    .main__section-workshop-problem-solution-reviews{
+        margin: 50px 20px;
+    }
+
+    .main__section-workshop-problem-solution-reviews--first-element{
+        grid-column: 1 / 4;
+    }
+
+    .main__section-workshop-problem-solution-review--grid:nth-child(2){
+        grid-column: 1 / 2;
+    }
+
+    .main__section-workshop-problem-solution-review--grid:nth-child(3){
+        grid-column: 2 / 3;
+    }
+
+    .main__section-workshop-problem-solution-review--grid:last-child{
+        grid-column: 3 / 4;
+    }
+
+    .header__background{
+        background-size: 100vw;
+    }
+
+    .main__section-workshop-problem-solution-boxes{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+@media (min-height:720px){
+    .header__background{
+        background-size: 100vw 100vh center; 
+    }
+}
